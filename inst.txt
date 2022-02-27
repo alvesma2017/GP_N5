@@ -1,0 +1,13 @@
+//iniciar projeto Node no VsCode executando o comando abaixo
+    * npm init
+//criar arquivo index.js na raiz
+//executar o comando abaixo para instalar o EXPRESS
+    * npm install express --save
+//executar o comando abaixo para instalar o EJS
+    * npm install ejs --save
+//entrar no arquivo package.json para conferir se foram instalados
+//criar pasta VIEWS para colocar arquivos EJS
+//criar pasta PUBLIC para colocar arquivos estaticos (CSS/JS/IMG)
+// as pastas CSS e JS do Boostrap (baixar no site) devem estar abaixo da PUBLIC
+// instalar o demon globalmernte, executando o comando abaixo
+    *npm install demon --global
