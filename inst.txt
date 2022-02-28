@@ -3,6 +3,12 @@
 //criar arquivo index.js na raiz
 //executar o comando abaixo para instalar o EXPRESS
     * npm install express --save
+//executar o comando abaixo para instalar o mysql2
+    * npm install mysql2 --save
+//executar o comando abaixo para instalar o body-parser
+    * npm install body-parser --save
+//executar comando abaixo para instalar o sequelize
+    * npm install sequelize --save
 //executar o comando abaixo para instalar o EJS
     * npm install ejs --save
 //entrar no arquivo package.json para conferir se foram instalados
