@@ -17,3 +17,4 @@
 // as pastas CSS e JS do Boostrap (baixar no site) devem estar abaixo da PUBLIC
 // instalar o demon globalmernte, executando o comando abaixo
     *npm install demon --global
+//Baixar e copiar pasta TINYMCE para pasta public
