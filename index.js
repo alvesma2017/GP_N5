@@ -1,16 +1,24 @@
 const express = require("express")
 const app = express()
+const session = require("express-session")
 const bodyParser = require("body-parser")
 const connection = require("./database/database")
 
 const categoriesContoller = require("./categories/CategoriesController")
 const articlesController = require("./articles/ArticlesController")
+const usersController = require("./users/usersController")
 
 const Article = require("./articles/Article")
 const Category = require("./categories/Category")
-const router = require("./categories/CategoriesController")
+const User = require("./users/User")
+
 
 app.set('view engine','ejs')
+
+app.use(session({
+    secret: "jkgtbsmdnddjsajkdasgdasdxbaslddhsçudasjd", cookie: {maxAge: 300000000000000000}
+
+}))
 
 app.use(express.static('public'))
 
@@ -22,13 +30,25 @@ connection
 .then(()=>{
     console.log("conexão ok")
 
-app.use("/", categoriesContoller)
-
-app.use("/", articlesController)
-
 }).catch((error)=>{
     console.log(error)
 })
+
+app.use("/", categoriesContoller)
+app.use("/", articlesController)
+app.use("/", usersController)
+
+// app.get("/session", (req,res) =>{
+//     req.session.ano = 2020
+//     req.session.email = "alvesma@gmail.com"
+//     res.send("sessão gerada")
+// })
+// app.get("/leitura", (req,res) => {
+//     res.json({
+//         ano: req.session.ano,
+//         email: req.session.email
+//     })
+// })
 
 app.get("/",(req,res)=>{
     Article.findAll({

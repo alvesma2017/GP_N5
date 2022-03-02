@@ -18,3 +18,7 @@
 // instalar o demon globalmernte, executando o comando abaixo
     *npm install demon --global
 //Baixar e copiar pasta TINYMCE para pasta public
+//instalar o bcrypt (para hash de senhas)
+    *npm install bcryptjs --save
+//instalar o modulo de sessões do express
+    *npm install express-session --save
